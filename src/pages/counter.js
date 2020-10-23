@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import "./counter.css"
+import "./hello.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Counter from "../components/Counter"
