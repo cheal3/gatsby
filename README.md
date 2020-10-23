@@ -17,4 +17,10 @@ gatsby , redux , hooks 를 혼합해서 사용해야 하는데 블로그들에�
 
 
 ### 20/10/23
-웹 공부할때 counter 와 함께 꼭 나오는 todoList를 구현해 볼 예정이다. 다른 페이지로 이동했을 때 할 일이 사라지면 안되기 때문에 redux를 적절히 섞어서 
+웹 공부할때 counter 와 함께 꼭 나오는 todoList를 구현해 볼 예정이다.
+![](https://images.velog.io/images/cheal3/post/a2fecc7e-1455-469f-ac46-43fdb379d65c/image.png)
+
+ useState로 작성했다가  다른 페이지로 이동했을 때 할 일이 사라지는게 맘에 안들어서 redux를 사용해서 store의 state에 저장하는 방식으로 구현하였다.
+ 이제 삭제 기능만 구현하면 되겠다.
+ 
+ 
