@@ -4,21 +4,20 @@ import { Link } from "gatsby"
 import "./hello.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Counter from "../components/Counter"
+import Todo from "../components/Todo"
 import store from "../redux/configureStore"
 import { Provider } from "react-redux"
-
-const counter = () => (
+const todo = () => (
   <Provider store={store}>
     <Layout>
       <SEO title="Page two" />
 
       <div>
-        <Counter />
+        <Todo />
       </div>
       <Link to="/">Go back to the homepage</Link>
     </Layout>
   </Provider>
 )
 
-export default counter
+export default todo
