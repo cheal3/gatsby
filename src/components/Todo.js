@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import TextField from "@material-ui/core/TextField"
 import "./Todo.css"
 import { useSelector, useDispatch } from "react-redux"
-import { addItem } from "../redux/todoDucks"
+import { addItem, deleteItem } from "../redux/todoDucks"
 
 const Todo = () => {
   const [text, setText] = useState("")
@@ -20,6 +20,14 @@ const Todo = () => {
       setText("") // 할 일 추가하면 창 비우기
     }
   }
+
+  const deleteValue = e => {
+    console.log(e.target.outerHTML)
+    const newText = e.target.outerHTML.replace(/(<([^>]+)>)/gi, "")
+
+    dispatch(deleteItem(newText))
+  }
+
   return (
     <div className="whole">
       <TextField
@@ -31,7 +39,7 @@ const Todo = () => {
       />
       <div className="itemContainer">
         {todoItem.map(element => (
-          <div className="item" onClick={e => console.log(element)}>
+          <div className="item" onClick={deleteValue}>
             <li>{element}</li>
           </div>
         ))}
